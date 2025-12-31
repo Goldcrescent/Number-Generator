@@ -1,5 +1,5 @@
-Number Generator
+A generator to give you random complex numbers
 
 --- INSTRUCTIONS ---
-
-Not sure what to, please say how to sort demo link in the Flavourtown Feedback box
+1) Go to the web page for the Number generatot
+2) Generate the numbers 
