@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Complex Number Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #1f6aa5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #2b82c9;
+        }
+
+        pre {
+            background: #2a2a2a;
+            padding: 10px;
+            margin-top: 15px;
+            text-align: left;
+            border-radius: 5px;
+            height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Random Complex Number Generator</h2>
+    <button onclick="generateNumbers()">Generate Numbers</button>
+    <pre id="output"></pre>
+</div>
+
+<script>
+    function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function generateComplexNumber() {
+        const real = randomInRange(-100, 100);
+        const imag = randomInRange(-100, 100);
+        return `${real.toFixed(2)} + ${imag.toFixed(2)}i`;
+    }
+
+    function generateNumbers() {
+        const output = document.getElementById("output");
+        output.textContent = "";
+
+        for (let i = 0; i < 10; i++) {
+            output.textContent += "Complex Number: " + generateComplexNumber() + "\n";
+        }
+    }
+</script>
+
+</body>
+</html>
